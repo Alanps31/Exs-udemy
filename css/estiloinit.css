@@ -1,0 +1,44 @@
+body
+{
+    background-color: rgb(228, 236, 252);
+}
+
+#formulario 
+{
+    position:relative;
+    background-color: white;
+    border: 3px solid rgb(216, 245, 252);
+    border-radius: 20px;
+    left: 67%;
+    top: 30px;
+    width:320px;
+    height:250px
+}
+
+#formulario input.usuario
+{
+    position: relative;
+    left: 75px;
+    margin-top: 50px;
+    
+}
+
+#formulario input.senha
+{
+    position: relative;
+    left: 75px;
+    margin-top: 5px;
+}
+
+#formulario button.botao
+{
+    position: relative;
+    left: 75px;
+    margin-top: 20px;
+    width: 55%;
+    height: 15%;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    background-color: #1877F2;
+    color: white
+}
