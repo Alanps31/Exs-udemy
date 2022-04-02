@@ -5,16 +5,18 @@ const axios = require('axios')
 axios.get(url).then(response => {
     const funcionarios = response.data
 
-let menor_salario = 0    
-
-    for(let sexo in funcionarios){
-        if(funcionarios[sexo].genero === "F" && funcionarios[sexo].pais === "China"){  
-            teste = funcionarios[sexo].salario
-            if(teste < funcionarios[sexo].salario){
-                this.menor_salario = funcionarios[sexo].salario
-            }
-          
+    let vetor = []
+    
+    for(let fem in funcionarios){
+        if(funcionarios[fem].genero === "F" && funcionarios[fem].pais === "China"){
+           vetor.push(funcionarios[fem].salario)
     }
 }
-    console.log(menor_salario)
+    let minimo = Math.max(...vetor)
+
+    funcionarios.forEach((funcionarios) => {
+        if(funcionarios.salario == minimo){
+            console.log(funcionarios)
+        }
+    })
 })
